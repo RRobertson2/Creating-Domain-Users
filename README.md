@@ -1,7 +1,14 @@
 # Creating-Domain-Users
 
 ### Objective
-To practice real-world skills in user management within Active Directory. This includes creating Organizational Units (OUs), structuring security groups, and safely adding user accounts with appropriate permissions and best practices.
+To practice real-world user management within an Active Directory Domain Services (AD DS) environment. This includes adding users, managing permissions, and organizing accounts using best practices. The project focuses on the following goals:
+- Add and configure domain users in a secure and structured way.
+- Organize default and custom security groups for clarity and manageability.
+- Follow best practices for admin account usage and user permission levels.
+- Prepare the Active Directory environment for applying Group Policy Objects (GPOs).
+- Practice Organizational Unit (OU) Structuring:
+- Create a logical and scalable hierarchy of OUs to manage users by department, location, or role.
+- Simulate a real enterprise structure with nested OUs.
 
 ### Skills Learned
 - User provisioning in Active Directory
