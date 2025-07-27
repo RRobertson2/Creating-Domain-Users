@@ -1,30 +1,29 @@
 # Creating-Domain-Users
 
 ### Objective
-Installed Windows Server 2022 on a virtual machine using Proxmox VE to build a foundational server environment. This lab project provided hands-on experience with virtual machine deployment, OS installation, driver management, and system configuration using enterprise tools.
+To practice real-world skills in user management within Active Directory. This includes creating Organizational Units (OUs), structuring security groups, and safely adding user accounts with appropriate permissions and best practices.
 
 ### Skills Learned
-- Windows Server 2022 installation and configuration
-- Virtualization and resource provisioning using Proxmox VE
-- Troubleshooting driver issues in virtual environments (e.g., VirtIO driver setup)
-- Identifying and resolving keyboard mapping issues in virtual machines
-
+- User provisioning in Active Directory
+- OU and security group organization
+- Windows Server 2022 administration
+- Secure account management practices<br>
+  <br>
 ### Tools Used
-- Dell PowerEdge T130 Server
-- Proxmox VE – for hypervisor and virtual machine management
-- Windows Server 2022 – for enterprise server OS installation
-- VirtIO Drivers – for enabling virtual hardware support (disk, network, etc.)
-- Windows Device Manager and system settings – for post-install configuration<br>
+- Windows Server 2022 (AD DS Role Installed)
+- Server Manager
+- Active Directory Users and Computers (ADUC)
+- Proxmox Virtual Environment<br>
 
 <hr style="border: 0.15px solid rgba(0, 0, 0, 0.05);">
   
-### Step 1: Create Proxmox Virtual Machine
-Provisioned a new virtual machine in Proxmox Virtual Environment (VE) with the following resources:<br>
-<br>
-- CPU: 2 cores  
-- Memory: 2 GB  
-- Disk: 120 GB  
-- ISOs Attached: Windows Server 2022 installation ISO and VirtIO driver ISO mounted to virtual CD-ROM drives<br>
+### Step 1: Navigate to ADUC via Server Manager
+This structure helps you visually manage and locate all domain-connected devices and services. Understanding where users and domain roles reside is critical for maintenance and troubleshooting.
+- Open Server Manager.
+- Go to Tools > Active Directory Users and Computers.
+- You will see your domain (e.g., DOOM.local) listed in the left-hand pane.
+- Under the Computers folder, any domain-joined computers would be visible.
+- The Domain Controllers folder shows all domain controllers (in this case, only DC01).<br>
 <br>
 
 <img src="https://github.com/user-attachments/assets/f801cb7e-6068-424e-bc1f-73d372cfeb1c" width="1000"><br>
