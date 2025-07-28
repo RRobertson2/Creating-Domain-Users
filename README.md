@@ -67,37 +67,59 @@ Drag and drop built-in security groups from the Users folder to the new Groups O
 
 <hr style="border: 0.35px solid rgba(0, 0, 0, 0.05);">
 
-### Step 5: Resolve PCI Simple Communications Controller Driver
-Installed missing drivers by:<br>
+### Step 4: Understand Built-In Administrator Account
+Double-click the built-in Administrator account to view its properties.
+- This account was configured during initial domain setup and has full control over the domain.
+- Avoid using this account for daily tasks. Create a lower-privileged user for administrative work. This protects against accidental misconfigurations or attacks using high-level credentials.<br>
 <br>
-1. Opening Device Manager  
-2. Right-clicking PCI Simple Communications Controller  
-3. Selecting “Browse my computer for drivers”  
-4. Navigating to VirtIO ISO and selecting the correct subfolder (e.g., NetKVM, Balloon)  
-5. Letting Windows search and install the driver
-
-<img src="https://github.com/user-attachments/assets/47aa077a-3c16-4f99-9596-a20de87ecf43" width="1000">
+<img src="https://github.com/user-attachments/assets/6a3cb2ea-53c6-4b1a-98f2-6487d449f3c3" width="1000">
 
 <hr style="border: 0.35px solid rgba(0, 0, 0, 0.05);">
 
-### Step 6: Fixing Keyboard Input Issues
-Resolved keyboard input errors and random shortcut triggers by:<br>
+### Step 5: Create a New Domain User
+Right-click on your target OU (e.g., ITUsers) > New > User<br>
 <br>
-- Opening Advanced Keyboard Settings  
-- Changing the input method to English (United States) – US
 
-<img src="https://github.com/user-attachments/assets/66a9f586-c9d7-4ebe-9e71-f7051a4f2120" width="1000">
+<img src="https://github.com/user-attachments/assets/7840a524-4c50-4495-b1ba-3c8a6cdf8203" width="1000">
 
 <hr style="border: 0.35px solid rgba(0, 0, 0, 0.05);">
 
-### Step 7: Complete Setup and Assign Static IP
-Finalized the administrator account setup and configured a static IP address manually.
-Updated the IP address, subnet mask, gateway, and DNS settings to place the server on a secure internal network.<br>
+Fill in:
+First Name Happy
+Last Name Gilmore
+Username (format: hgilmore)<br>
+<br>
+<img src="https://github.com/user-attachments/assets/6d485d91-2019-44e7-93c9-ee81e83e75cb" width="1000">
+
+<hr style="border: 0.35px solid rgba(0, 0, 0, 0.05);">
+
+Click Next, set a secure password. Choose whether the user must change their password at next logon. Click Finish to complete.<br>
+<br>
+For security, real environments often use randomly generated temporary passwords and enforce password reset at first login. User properties can be edited further by double-clicking the user account.<br>
+<br>
+<img src="https://github.com/user-attachments/assets/111b6eda-0734-406f-809d-1ddb79a49217" width="1000"><br>
+<br>
+<img src="https://github.com/user-attachments/assets/62f2a8a3-7322-417c-a867-21511f99a3a2" width="1000"><br>
+<br>
+<img src="https://github.com/user-attachments/assets/4c4be718-22d6-4a68-8006-7d57c54e5033" width="1000"><br>
+
+<hr style="border: 0.35px solid rgba(0, 0, 0, 0.05);">
+
+### Step 6: View or Edit User Properties
+Double-click any user to open the Properties window. Add details such as department, job title, contact info, or assign group membership.<br>
+<br>
+Adding metadata improves directory searchability and helps with filtering users in reports, permissions, and automated scripts.<br>
 <br>
 
-<img src="https://github.com/user-attachments/assets/5ac9ae4a-a162-4b46-916e-921a02398c52" width="1000">
-<img src="https://github.com/user-attachments/assets/40c7428d-d2ed-4b95-890a-c0ccd8be208f" width="1000">
-<img src="https://github.com/user-attachments/assets/898e6c2b-8cd1-4d2d-855f-441314f267d6" width="1000">
-<img src="https://github.com/user-attachments/assets/f87a7e7c-52f5-4cce-b74e-cb404372d9a0" width="1000">
+<img src="https://github.com/user-attachments/assets/e18e869c-c57b-4376-a8e1-19fe2f2a56b1" width="1000">
 
+<hr style="border: 0.35px solid rgba(0, 0, 0, 0.05);">
+
+### Step 7:  Create More Users Efficiently
+Right-click an existing user and choose Copy to quickly clone the structure of a user. Update only the unique fields (e.g., name, username, password).<br>
+<br>
+Copying saves time and ensures consistency when adding users with similar settings or group memberships.<br>
+<br>
+
+<img src="https://github.com/user-attachments/assets/8b561feb-afbf-40c0-b69e-0c560844b0d8" width="1000">
 
