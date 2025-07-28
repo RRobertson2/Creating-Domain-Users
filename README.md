@@ -25,60 +25,45 @@ To practice real-world user management within an Active Directory Domain Service
 <hr style="border: 0.15px solid rgba(0, 0, 0, 0.05);">
   
 ### Step 1: Navigate to ADUC via Server Manager
-This structure helps you visually manage and locate all domain-connected devices and services. Understanding where users and domain roles reside is critical for maintenance and troubleshooting.
 - Open Server Manager.
-- Go to Tools > Active Directory Users and Computers.
-- You will see your domain (e.g., DOOM.local) listed in the left-hand pane.
-- Under the Computers folder, any domain-joined computers would be visible.
-- The Domain Controllers folder shows all domain controllers (in this case, only DC01).<br>
-<br>
+- Go to Tools > Active Directory Users and Computers.<br>
 
-<img src="https://github.com/user-attachments/assets/f801cb7e-6068-424e-bc1f-73d372cfeb1c" width="1000"><br>
+<img src="https://github.com/user-attachments/assets/00d8de4a-2215-44d3-84f4-2c9ba5c718c2" width="1000"><br>
 <br>
-<img src="https://github.com/user-attachments/assets/d4e14173-c2fd-46db-99d7-92244f0fc116" width="1000">
 
 <hr style="border: 0.15px solid rgba(0, 0, 0, 0.05);">
 
-### Step 2: Configure ISO Boot Order
-Updated virtual hardware settings to prioritize the Windows Server ISO as the primary boot device, followed by the VirtIO ISO. This ensures required drivers are available during the OS installation process.<br>
+You will see domain (e.g., DOOM.local) listed in the left-hand pane.<br>
 <br>
-
-<img src="https://github.com/user-attachments/assets/96b64655-b705-4a9c-832c-ae5558f0f9fe" width="1000">
+- Under the Computers folder, any domain-joined computers would be visible.
+- The Domain Controllers folder shows all domain controllers (in this case, only DC01).<br>
+<br>
+This structure helps you visually manage and locate all domain-connected devices and services. Understanding where users and domain roles reside is critical for maintenance and troubleshooting.<br>  
+<br>
+<img src="https://github.com/user-attachments/assets/b3584863-f491-4280-9a92-45ae4d55ec0d" width="1000">
 
 <hr style="border: 0.35px solid rgba(0, 0, 0, 0.05);">
 
-### Step 3: Install Windows Server 2022
-Launched the virtual machine and installed Windows Server 2022 (Desktop Experience).
-Selected the appropriate region, language, and performed a custom installation. Followed standard setup instructions.<br>
+### Step 2: Create an Organizational Unit (OU)
+- Right-click your domain name (e.g., DOOM.local) > New > Organizational Unit.
+- Name it something like Groups.<br>
+<br>
+Using OUs allows you to organize users separately from default built-in accounts. This supports better security, scalability, and simplifies applying group policies.<br>
 <br>
 
-<img src="https://github.com/user-attachments/assets/22b34de5-f488-4eb5-8a87-a56e0e50e10c" width="1000"><br>
+<img src="https://github.com/user-attachments/assets/12f7e975-ab8c-4d86-b42e-afde373f9cbf" width="1000"><br>
 <br>
-<img src="https://github.com/user-attachments/assets/fe34e6fe-fb2f-48e4-8777-8eeab7867308" width="1000"><br>
+<img src="https://github.com/user-attachments/assets/29394860-c1df-48af-8fea-11937933fe81" width="1000"><br>
 <br>
-<img src="https://github.com/user-attachments/assets/d8fe5b20-13e5-40ed-82d9-ac3122889065" width="1000">
-
 <hr style="border: 0.35px solid rgba(0, 0, 0, 0.05);">
 
-### Step 4: Install VirtIO Drivers
-Mounted the VirtIO ISO and installed essential drivers manually to enable disk, network, and input functionality:<br>
-<br>
-- Red Hat VirtIO Ethernet Adapter  
-- VirtIO Balloon Driver  
-- VirtIO SCSI Controller<br>
+### Step 3: Move Default Security Groups to the OU
+Drag and drop built-in security groups from the Users folder to the new Groups OU. Keeps the Users folder clean and focused on actual user accounts. Helps avoid confusion and maintains proper structure within Active Directory.<br>
   <br>
-Download drivers from:
-Download: https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/
 
-<img src="https://github.com/user-attachments/assets/66d417ad-d099-42f3-bf13-dd85f1464056" width="1000"><br>
+<img src="https://github.com/user-attachments/assets/c30753d6-2063-4985-8f98-e252d00f17ba" width="1000"><br>
 <br>
-<img src="https://github.com/user-attachments/assets/7ba4528d-32ee-41e6-be4a-d3c67cd01116" width="1000"><br>
-<br>
-<img src="https://github.com/user-attachments/assets/333c241e-2468-4391-adc9-4bd047cd26d1" width="1000"><br>
-<br>
-<img src="https://github.com/user-attachments/assets/02163f93-0de1-4754-92ca-e0b8ced2d787" width="1000"><br>
-<br>
-<img src="https://github.com/user-attachments/assets/05f5b0af-e47c-482d-b420-9707d13ad9ad" width="1000">
+<img src="https://github.com/user-attachments/assets/51211156-bc55-4531-8bf9-85796f4e171d" width="1000"><br>
 
 <hr style="border: 0.35px solid rgba(0, 0, 0, 0.05);">
 
